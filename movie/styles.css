@@ -34,11 +34,12 @@
 
 .movie-detail .summary-wrapper .back {
     float: left;
-    margin-top: 54px;
-    margin-left: 28px;
+    margin-top: 60px;
+    margin-left: 40px;
     color: #fff;
     cursor: pointer;
-    font-size: 42px;
+    width: 38px;
+    padding: 0;
 }
 
 .movie-detail .summary-wrapper .title {
@@ -55,6 +56,8 @@
     position: absolute;
     z-index: 2;
     top: 60px;
+    padding: 0;
+    width: 30px;
     right: 140px;
     color: #fff;
 }
