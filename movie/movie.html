@@ -8,17 +8,36 @@
 
     <!-- Begin Paper Elements -->
     <script src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
     <link rel="import" href="../bower_components/paper-button/paper-button.html">
+    <link rel="import" href="../bower_components/paper-tooltip/paper-tooltip.html">
+    <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="../bower_components/paper-item/paper-item.html">
+    <link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+    <link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+
     <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="../bower_components/iron-icons/av-icons.html">
-    <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="../bower_components/iron-icons/hardware-icons.html">
+
     <!-- End Paper Elements -->
 
     <link rel="stylesheet" type="text/css" href="../reset.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
 </head>
 
 <body>
+    <header>
+        <span class="title">Photon Media</span>
+        <div class="os-controls">
+            <paper-icon-button class="minimize" icon="remove"></paper-icon-button>
+            <paper-icon-button class="maximize" icon="check-box-outline-blank"></paper-icon-button>
+            <paper-icon-button class="close" icon="close"></paper-icon-button>
+        </div>
+    </header>
+
+
     <div id="root" class="movie-detail">
         <div class="bg-backdrop" style="background-image: url(https://walter.trakt.us/images/movies/000/183/371/fanarts/original/2097014462.jpg)"> </div>
         <div class="summary-wrapper movie">
@@ -26,7 +45,9 @@
             <div class="title">
                 The Martian
             </div>
-            <paper-icon-button icon="bookmark-border" class="bookmark-toggle"> </paper-icon-button>
+            <paper-icon-button id="bookmark_button" icon="bookmark-border" class="bookmark-toggle"> </paper-icon-button>
+            <paper-tooltip for="bookmark_button" offset="0">Bookmark movie</paper-tooltip>
+
             <img src="https://walter.trakt.us/images/movies/000/183/371/posters/thumb/8767195506.jpg" class="poster" />
             <div class="meta">
                 <div class="meta-item">
@@ -35,19 +56,12 @@
                     <paper-icon-button noink icon="star-half" class="star"></paper-icon-button>
                     <paper-icon-button noink icon="star-border" class="star"></paper-icon-button>
                     <paper-icon-button noink icon="star-border" class="star"></paper-icon-button>
-
                     <span class="meta-dot first"></span>
-                    <p>
-                        Science Fiction, Adventure, Drama
-                    </p>
+                    <p>Science Fiction, Adventure, Drama</p>
                     <span class="meta-dot"></span>
-                    <p>
-                        2015
-                    </p>
+                    <p>2015</p>
                     <span class="meta-dot"></span>
-                    <p>
-                        141 mins
-                    </p>
+                    <p>141 mins</p>
                 </div>
                 <div class="meta-synop">
                     During a manned mission to Mars, Astronaut Mark Watney is presumed dead after a fierce storm and left behind by his crew. But Watney has survived and finds himself stranded and alone on the hostile planet. With only meager supplies, he must draw upon his ingenuity, wit and spirit to subsist and find a way to signal to Earth that he is alive.
@@ -85,11 +99,45 @@
         </div>
         <div class="controls-container">
             <div class="meta-container-c">
-                <li class="quality-toggle">
-                </li>
+                <style is="custom-style">
+                    paper-dropdown-menu.meta-dropdown {
+                        --paper-dropdown-menu: {
+                            top: 2px;
+                            width: 150px;
+                        }
+                        --paper-input-container-label: {
+                            color: white;
+                            font-weight: 500;
+                            margin-left: 10px;
+                        }
+                        --paper-input-container-input: {}
+                        --paper-input-container-underline: {
+                            display: none;
+                        }
+                    }
+                </style>
                 <li class="subtitles-dropdown">
+                    <paper-icon-button class="icon" noink class="play-icon" icon="av:subtitles"></paper-icon-button>
+                    <paper-dropdown-menu class="meta-dropdown" vertical-align="bottom" horizontal-align="right" label="None">
+                        <paper-listbox class="dropdown-content">
+                            <paper-item>allosaurus</paper-item>
+                            <paper-item>brontosaurus</paper-item>
+                            <paper-item>carcharodontosaurus</paper-item>
+                            <paper-item>diplodocus</paper-item>
+                        </paper-listbox>
+                    </paper-dropdown-menu>
                 </li>
-                <li id="player-option" class="device-dropdown">
+                <li class="device-dropdown">
+                    <paper-icon-button class="icon" noink class="play-icon" icon="hardware:cast-connected"></paper-icon-button>
+
+                    <paper-dropdown-menu class="meta-dropdown" vertical-align="bottom" horizontal-align="right" label="Pizza Cast">
+                        <paper-listbox class="dropdown-content">
+                            <paper-item>allosaurus</paper-item>
+                            <paper-item>brontosaurus</paper-item>
+                            <paper-item>carcharodontosaurus</paper-item>
+                            <paper-item>diplodocus</paper-item>
+                        </paper-listbox>
+                    </paper-dropdown-menu>
                 </li>
             </div>
 
