@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Photon Media Movie</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300italic,300,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Begin Paper Elements -->
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+    <link rel="import" href="../bower_components/paper-menu-button/paper-menu-button.html">
+    <link rel="import" href="../bower_components/paper-menu/paper-menu.html">
+    <link rel="import" href="../bower_components/paper-button/paper-button.html">
+    <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="../bower_components/paper-item/paper-item.html">
+    <link rel="import" href="../bower_components/paper-material/paper-material.html">
+
+    <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+
+    <!-- End Paper Elements -->
+
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+</head>
+
+<body>
+    <header>
+        <span class="title">Photon Media</span>
+        <div class="os-controls">
+            <paper-icon-button class="minimize" icon="remove"></paper-icon-button>
+            <paper-icon-button class="maximize" icon="check-box-outline-blank"></paper-icon-button>
+            <paper-icon-button class="close" icon="close"></paper-icon-button>
+        </div>
+    </header>
+    <div id="root" class="search-container">
+        <div style="background-image: url(https://walter.trakt.us/images/movies/000/128/378/fanarts/original/401b051d49.jpg)" class="search-container-backdrop"></div>
+        <paper-material class="search-box-contain" elevation="1">
+            <paper-menu-button>
+                <paper-icon-button icon="more-vert" class="dropdown-trigger"></paper-icon-button>
+                <paper-menu class="dropdown-content">
+                    <paper-item>All</paper-item>
+                    <paper-item>Movies</paper-item>
+                    <paper-item>Series</paper-item>
+                    <paper-item>Music</paper-item>
+                </paper-menu>
+            </paper-menu-button>
+            <input class="searchtext" />
+        </paper-material>
+    </div>
+</body>
+
+</html>

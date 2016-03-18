@@ -189,6 +189,15 @@
     margin-left: -6px;
 }
 
+.movie-detail .summary-wrapper .meta .meta-btn.right {
+    float: right;
+}
+
+.movie-detail .summary-wrapper .meta .meta-btn.right.first {
+    float: right;
+    margin-left: 6px;
+}
+
 .movie-detail .summary-wrapper .meta .meta-divider {
     width: 100%;
     position: relative;
