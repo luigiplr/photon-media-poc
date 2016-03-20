@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Photon Media Movie</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500italic,500,300italic,300,100italic,100,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Begin Paper Elements -->
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+
+    <link rel="import" href="../bower_components/paper-spinner/paper-spinner.html">
+    <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+
+    <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+
+    <!-- End Paper Elements -->
+
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+</head>
+
+<body>
+    <header>
+        <span class="title">Photon Media</span>
+        <div class="os-controls">
+            <paper-icon-button class="minimize" icon="remove"></paper-icon-button>
+            <paper-icon-button class="maximize" icon="check-box-outline-blank"></paper-icon-button>
+            <paper-icon-button class="close" icon="close"></paper-icon-button>
+        </div>
+    </header>
+
+    <div class="detail">
+        <div class="bg-backdrop"></div>
+        <div class="summary-wrapper movie">
+            <paper-icon-button class="back" icon="arrow-back"></paper-icon-button>
+            <style is="custom-style">
+                paper-spinner.thin {
+                    --paper-spinner-stroke-width: 2px;
+                }
+            </style>
+            <div class="loading-spinner-wrapper">
+                <paper-spinner class="loading-spinner thin" active></paper-spinner>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
