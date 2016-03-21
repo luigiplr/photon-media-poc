@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Photon Media Movie</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500italic,500,300italic,300,100italic,100,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Begin Paper Elements -->
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="../bower_components/paper-button/paper-button.html">
+    <link rel="import" href="../bower_components/paper-tooltip/paper-tooltip.html">
+    <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="../bower_components/paper-item/paper-item.html">
+    <link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+    <link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+    <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="../bower_components/iron-icons/av-icons.html">
+    <link rel="import" href="../bower_components/iron-icons/hardware-icons.html">
+    <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="../bower_components/paper-tab/paper-tab.html">
+    <link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+    <!-- End Paper Elements -->
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+</head>
+
+<body>
+    <header>
+        <span class="title">Photon Media</span>
+        <div class="os-controls">
+            <paper-icon-button class="minimize" icon="remove"></paper-icon-button>
+            <paper-icon-button class="maximize" icon="check-box-outline-blank"></paper-icon-button>
+            <paper-icon-button class="close" icon="close"></paper-icon-button>
+        </div>
+    </header>
+    <div class="show-detail">
+        <div class="bg-backdrop" style="background-image: url(https://walter.trakt.us/images/shows/000/001/393/fanarts/original/fc68b3b649.jpg)"></div>
+        <div class="summary-wrapper">
+            <paper-icon-button class="back" icon="arrow-back"></paper-icon-button>
+            <div class="title">
+                The Walking Dead
+            </div>
+            <paper-icon-button icon="bookmark" class="bookmark-toggle">
+            </paper-icon-button>
+            <style is="custom-style">
+                .seasons-wrapper {
+                    --paper-toolbar-background: transparent;
+                }
+                
+                .season-tabs {
+                    --paper-tabs-selection-bar-color: white;
+                }
+            </style>
+            <paper-toolbar class="seasons-wrapper">
+                <paper-tabs selected="0" class="season-tabs bottom" noink scrollable>
+                    <paper-tab class="season">Show Info</paper-tab>
+                    <paper-tab class="season">season 1</paper-tab>
+                    <paper-tab class="season">season 2</paper-tab>
+                    <paper-tab class="season">season 3</paper-tab>
+                    <paper-tab class="season">season 4</paper-tab>
+                    <paper-tab class="season">season 5</paper-tab>
+                </paper-tabs>
+            </paper-toolbar>
+        </div>
+        <div class="info-wrapper">
+            <img src="https://walter.trakt.us/images/shows/000/001/393/posters/thumb/dec5cd226c.jpg" class="poster" />
+
+            <div class="meta-container show-info">
+                <div class="meta-item">
+                    <span class="meta-dot"></span>
+                    <p>
+                        geners
+                    </p>
+                    <span class="meta-dot"></span>
+                    <p>
+                        2015 - 2016
+                    </p>
+                    <span class="meta-dot"></span>
+                    <p>45 min</p>
+                </div>
+                <div class="meta-synop">
+                    synopsis
+                </div>
+                <paper-button id="trakt-link" class="meta-btn">
+                    <i class="zmdi zmdi-open-in-new"></i> More Info
+                </paper-button>
+                <div class="meta-divider"></div>
+                <div class="people">
+                    <div class="person-avatar">
+                        <img src="">
+                    </div>
+                    <p class="person">
+                        person name
+                    </p>
+                    <p class="status">
+                        as character
+                    </p>
+                </div>
+            </div>
+            <div class="episode-container ">
+                <ul class="visible episode-list-show">
+                    <li class="epsiode-tab active">
+                        <p class="episode-id">S06E13</p>
+                        <p class="episode-name">The same boat</p>
+                        <paper-icon-button class="info-icon" icon="info"></paper-icon-button>
+                        <p class="episode-airdate">March 13, 2016 9:00 PM</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="controls-container">
+                <paper-button raised class="watchnow-btn">Play <span>S01E01</span></paper-button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
