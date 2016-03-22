@@ -15,6 +15,9 @@
     <link rel="import" href="../bower_components/paper-item/paper-item.html">
     <link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
     <link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+    <link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
+    <link rel="import" href="../bower_components/neon-animation/animations/fade-in-animation.html">
+    <link rel="import" href="../bower_components/neon-animation/animations/fade-out-animation.html">
 
     <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="../bower_components/iron-icons/av-icons.html">
@@ -36,8 +39,24 @@
             <paper-icon-button class="close" icon="close"></paper-icon-button>
         </div>
     </header>
-
-
+    <style is="custom-style">
+        paper-dialog.warning {
+            position: fixed;
+            width: 30vw;
+            min-width: 500px;
+            overflow: auto;
+        }
+    </style>
+    <paper-dialog with-backdrop opened=true class="warning" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+        <h2>Header</h2>
+        <paper-dialog-scrollable>
+            Lorem ipsum...
+        </paper-dialog-scrollable>
+        <div class="buttons">
+            <paper-button dialog-dismiss>Cancel</paper-button>
+            <paper-button dialog-confirm>Accept</paper-button>
+        </div>
+    </paper-dialog>
     <div id="root" class="movie-detail">
         <div class="bg-backdrop" style="background-image: url(https://walter.trakt.us/images/movies/000/183/371/fanarts/original/2097014462.jpg)"> </div>
         <div class="summary-wrapper movie">
@@ -150,6 +169,7 @@
 
         </div>
     </div>
+
 </body>
 
 </html>

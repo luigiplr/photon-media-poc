@@ -2,17 +2,8 @@
     position: absolute;
     height: 100vh;
     width: 100vw;
-    background-color: #17181b;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.detail .bg-backdrop {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    opacity: 1;
     background-color: #212121;
+    overflow: hidden;
 }
 
 .detail .back {
@@ -22,6 +13,7 @@
     color: #fff;
     cursor: pointer;
     width: 38px;
+    z-index: 1;
     padding: 0;
 }
 
@@ -38,4 +30,27 @@
     margin-top: 45vh;
     display: inline-block;
     text-align: left;
+}
+
+.detail .loading-spinner-wrapper .status-btn {
+    color: #fff;
+    opacity: .6;
+    position: relative;
+    top: -30px;
+}
+
+.detail .loading-spinner-wrapper .status-text {
+    width: 50vw;
+    line-height: 25px;
+    color: white;
+    opacity: .6;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    font-size: 20px;
+    font-weight: 200;
+    position: fixed;
+    margin-top: calc(45vh - 65px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
