@@ -307,11 +307,29 @@
     width: 100%;
     list-style: none;
     margin: 0;
-    height: 55px;
     padding: 0;
 }
 
+.movie-detail .controls-container .meta-container-c li.quality {
+    margin-top: -10px;
+}
+
+.movie-detail .controls-container .meta-container-c li.quality .quality {
+    color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+    margin-left: 10px;
+    bottom: -2px;
+    margin-top: 3px;
+}
+
+.movie-detail .controls-container .meta-container-c li.subtitles-dropdown {
+    height: 40px;
+}
+
 .movie-detail .controls-container .meta-container-c li .icon {
-    color: white;
+    color: #fff;
+    padding: 4px;
     cursor: default;
 }
