@@ -94,25 +94,39 @@
         <div class="controls-container">
             <div class="meta-container-c">
                 <style is="custom-style">
-                paper-dropdown-menu.meta-dropdown {
-                    --paper-dropdown-menu: {
-                        top: 2px;
-                        width: 150px;
+                    paper-dropdown-menu.meta-dropdown {
+                        --primary-text-color: #fff;
+                        --paper-input-container-input: {
+                            font-weight: 500;
+                            font-size: 15px;
+                        }
+                        --paper-dropdown-menu-icon: {
+                            color: #fff;
+                        }
+                        --paper-input-container-underline: {
+                            display: none;
+                        }
                     }
-                    --paper-dropdown-menu-input:{
-                        color: #fff !important;
-                    }
-                    --paper-dropdown-menu-icon: {
-                        color: #fff;
-                    }
-                    --paper-input-container-underline: {
-                        display: none;
-                    }
-                }
                 </style>
                 <li class="quality">
                     <paper-icon-button class="icon" noink icon="av:high-quality"></paper-icon-button>
                     <span class="quality">1080p</span>
+                </li>
+                <li class="subtitles-dropdown">
+                    <paper-icon-button class="icon" noink icon="av:subtitles"></paper-icon-button>
+                    <paper-dropdown-menu no-label-float vertical-align="bottom" horizontal-align="right" class="meta-dropdown">
+                        <paper-listbox class="dropdown-content">
+                            <paper-item>English</paper-item>
+                        </paper-listbox>
+                    </paper-dropdown-menu>
+                </li>
+                <li class="subtitles-dropdown">
+                    <paper-icon-button class="icon" noink icon="av:subtitles"></paper-icon-button>
+                    <paper-dropdown-menu no-label-float vertical-align="bottom" horizontal-align="right" class="meta-dropdown">
+                        <paper-listbox class="dropdown-content">
+                            <paper-item>English</paper-item>
+                        </paper-listbox>
+                    </paper-dropdown-menu>
                 </li>
             </div>
             <paper-button raised style="" class="watchnow-btn">
