@@ -39,12 +39,10 @@
 }
 
 .settings .left-panel {
-
+    background-color: rgba(45, 45, 45, 0.7);
     width: 200px;
     height: 100%;
     float: left;
-    border-right: 1px solid black;
-    box-sizing: border-box;
 }
 
 .settings .right-panel {
