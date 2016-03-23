@@ -1,3 +1,22 @@
+.settings {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #212121;
+    overflow: hidden;
+}
+
+.settings .back {
+    float: left;
+    margin-top: 60px;
+    margin-left: 40px;
+    color: #fff;
+    cursor: pointer;
+    width: 38px;
+    z-index: 1;
+    padding: 0;
+}
+
 .settings .container {
     margin: 60px 40px 20px 40px;
     height: calc(100vh - 60px - 20px);
@@ -15,81 +34,21 @@
     position: relative;
     width: 100%;
     box-sizing: border-box;
-    height: calc(100% - 46px);
-    margin-top: 8px;
+    height: calc(100% - 48px);
+    margin-top: 10px;
 }
 
 .settings .left-panel {
-    background: rgba(65,65,65, 0.7);
+
     width: 200px;
     height: 100%;
     float: left;
+    border-right: 1px solid black;
+    box-sizing: border-box;
 }
 
 .settings .right-panel {
-    background: rgba(45,45,45, 0.7);
     width: calc(100% - 200px);
     height: 100%;
     float: right;
-}
-
-.detail {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background-color: #212121;
-    overflow: hidden;
-}
-
-.detail .back {
-    float: left;
-    margin-top: 60px;
-    margin-left: 40px;
-    color: #fff;
-    cursor: pointer;
-    width: 38px;
-    z-index: 1;
-    padding: 0;
-}
-
-.detail .loading-spinner-wrapper {
-    width: 100vw;
-    position: absolute;
-    height: 100vh;
-    text-align: center;
-}
-
-.detail .loading-spinner-wrapper .loading-spinner {
-    width: 50px;
-    height: 50px;
-    margin-top: 45vh;
-    display: inline-block;
-    text-align: left;
-}
-
-.detail .loading-spinner-wrapper .status-btn {
-    color: #fff;
-    opacity: .6;
-    position: relative;
-    top: -30px;
-}
-
-.detail .loading-spinner-wrapper .status-text {
-    width: 50vw;
-    line-height: 25px;
-    color: white;
-    opacity: .6;
-    padding-left: 25vw;
-    padding-right: 25vw;
-    font-size: 20px;
-    font-weight: 200;
-    position: fixed;
-    margin-top: calc(45vh - 65px);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.dialog-button {
-    font-weight: 400;
 }

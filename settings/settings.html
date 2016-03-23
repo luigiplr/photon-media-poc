@@ -37,11 +37,27 @@
         </div>
     </header>
 
-    <div class="detail settings">
+    <div class="settings">
+        
+        <paper-icon-button class="back" icon="arrow-back"></paper-icon-button>
         <div class="container">
             <h1>Settings</h1>
             <div class="panel-container">
-                <div class="left-panel"></div>
+                <div class="left-panel">
+                    <style is="custom-style">
+                        .settings .left-panel paper-listbox {
+                            --paper-listbox-background-color: transparent;
+                            --paper-listbox-color: #fff;
+                        };
+                    </style>
+                    <paper-listbox selected="0">
+                        <paper-item>General</paper-item>
+                        <paper-item>Display</paper-item>
+                        <paper-item>Window</paper-item>
+                        <paper-item>Network</paper-item>
+                        <paper-item>About</paper-item>
+                    </paper-listbox>
+                </div>
                 <div class="right-panel"></div>
             </div>
         </div>
