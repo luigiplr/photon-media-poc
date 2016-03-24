@@ -27,7 +27,7 @@
     font-weight: 400;
     color: #fff;
     line-height: 38px;
-    margin-left: 60px;
+    margin-left: 52px;
 }
 
 .settings .panel-container {
@@ -49,4 +49,59 @@
     width: calc(100% - 200px);
     height: 100%;
     float: right;
+    padding: 5px 15px;
+    box-sizing: border-box
+}
+
+.settings .right-panel .setting {
+    min-height: 35px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 12px
+}
+.settings .right-panel h1, .settings .right-panel h2, .settings .right-panel h3, .settings .right-panel p {
+    color: #fff;
+}
+
+.settings .right-panel h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.settings .right-panel .setting-inner {
+    padding-left: 5px;
+}
+
+.settings .setting paper-checkbox {
+    margin: 8px 0;
+}
+
+.setting.flex-checkbox .setting-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 850px;
+}
+.setting.flex-checkbox paper-checkbox {
+    width: 50%;
+    min-width: 355px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.settings .setting.plugins-list .setting-inner paper-listbox {
+    min-width: 445px;
+}
+
+.settings .setting.plugins-list .setting-inner paper-item {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.settings .setting.plugins-list .setting-inner .plugin-btns paper-icon-button:not(:last-of-type) {
+    margin-right: 4px;
 }

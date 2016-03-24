@@ -15,6 +15,8 @@
     <link rel="import" href="../bower_components/paper-item/paper-item.html">
     <link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
     <link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+    <link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="../bower_components/paper-tooltip/paper-tooltip.html">
 
     <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="../bower_components/iron-icons/av-icons.html">
@@ -50,18 +52,124 @@
                             --paper-listbox-color: #fff;
                         };
                     </style>
-                    <paper-listbox selected="0">
+                    <paper-listbox selected="2">
                         <paper-item>General</paper-item>
-                        <paper-item>Display</paper-item>
-                        <paper-item>Window</paper-item>
+                        <paper-item onClick="showUI()">UI Settings</paper-item>
+                        <paper-item onClick="showPlugin()">Plugins</paper-item>
                         <paper-item>Network</paper-item>
                         <paper-item>About</paper-item>
                     </paper-listbox>
                 </div>
-                <div class="right-panel"></div>
+                <div class="right-panel">
+                    <style is="custom-style">
+                        .settings .right-panel paper-checkbox {
+                            --paper-checkbox-label-color: #fff;
+                            --paper-checkbox-unchecked-color: var(--paper-grey-500);
+                        };
+                    </style>
+                    
+                    <div id="ui-settings" class="hidden">
+                        <div class="setting display-settings flex-checkbox">
+                            <h2>Display Options</h2>
+                            <div class="setting-inner">
+                                <paper-checkbox checked="1">Enable loading random background images</paper-checkbox>
+                                <paper-checkbox checked="1">Confim when deleting shows</paper-checkbox>
+                                <paper-checkbox>Show confirmation dialog on exit</paper-checkbox>
+                                <paper-checkbox>Show window when intercepting magnets</paper-checkbox>
+                            </div>
+                        </div>
+
+                        <div class="setting tray-settings flex-checkbox">
+                            <h2>System Tray</h2>
+                            <div class="setting-inner">
+                                <paper-checkbox checked="1">Minimize button minimizes to tray</paper-checkbox>
+                                <paper-checkbox>Close button minimizes to tray</paper-checkbox>
+                                <paper-checkbox>Always display icon in tray</paper-checkbox>
+                                <paper-checkbox>Single click opens program</paper-checkbox>
+                                <paper-checkbox checked="1">Show notifications in tray</paper-checkbox>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plugin-settings">
+                        <div class="setting">
+                            <div class="setting-inner">
+                                <paper-checkbox checked="1">Enable Plugins</paper-checkbox>
+                            </div>
+                        </div>
+                        <div class="setting plugins-list">
+                            <style is="custom-style">
+                                .settings .right-panel .plugins-list paper-listbox {
+                                    --paper-listbox-background-color: rgba(45, 45, 45, 0.7);
+                                    --paper-listbox-color: #fff;
+                                };
+                            </style>
+                            <h2>Plugins List</h2>
+                            <div class="setting-inner">
+                                <paper-listbox>
+                                    <paper-item>
+                                        <div class="plugin-name">Memes</div>
+                                        <div class="plugin-btns">
+                                            <paper-icon-button icon="update" id="plugin-update-btn"></paper-icon-button>
+                                            <paper-icon-button icon="info-outline" id="plugin-info-btn"></paper-icon-button>
+                                            <paper-icon-button icon="delete" id="plugin-delete-btn"></paper-icon-button>
+                                            <paper-tooltip for="plugin-info-btn" offset="0" position="top">View plugin info</paper-tooltip>
+                                            <paper-tooltip for="plugin-update-btn" offset="0" position="top">Download plugin update</paper-tooltip>
+                                            <paper-tooltip for="plugin-delete-btn" offset="0" position="top">Remove plugin</paper-tooltip>
+                                        </div>
+                                    </paper-item>
+                                    <paper-item>
+                                        <div class="plugin-name">CBBE</div>
+                                        <div class="plugin-btns">
+                                            <paper-icon-button icon="update" id="plugin-update-btn"></paper-icon-button>
+                                            <paper-icon-button icon="info-outline" id="plugin-info-btn"></paper-icon-button>
+                                            <paper-icon-button icon="delete" id="plugin-delete-btn"></paper-icon-button>
+                                            <paper-tooltip for="plugin-info-btn" offset="0" position="top">View plugin info</paper-tooltip>
+                                            <paper-tooltip for="plugin-update-btn" offset="0" position="top">Download plugin update</paper-tooltip>
+                                            <paper-tooltip for="plugin-delete-btn" offset="0" position="top">Remove plugin</paper-tooltip>
+                                        </div>
+                                    </paper-item>
+                                    <paper-item>
+                                        <div class="plugin-name">Schlongs of Skyrim</div>
+                                        <div class="plugin-btns">
+                                            <paper-icon-button icon="update" disabled id="plugin-update-btn"></paper-icon-button>
+                                            <paper-icon-button icon="info-outline" id="plugin-info-btn"></paper-icon-button>
+                                            <paper-icon-button icon="delete" id="plugin-delete-btn"></paper-icon-button>
+                                            <paper-tooltip for="plugin-info-btn" offset="0" position="top">View plugin info</paper-tooltip>
+                                            <paper-tooltip for="plugin-update-btn" offset="0" position="top">Download plugin update</paper-tooltip>
+                                            <paper-tooltip for="plugin-delete-btn" offset="0" position="top">Remove plugin</paper-tooltip>
+                                        </div>
+                                    </paper-item>
+                                    <paper-item>
+                                        <div class="plugin-name">Poop, hahah</div>
+                                        <div class="plugin-btns">
+                                            <paper-icon-button icon="update" disabled id="plugin-update-btn"></paper-icon-button>
+                                            <paper-icon-button icon="info-outline" id="plugin-info-btn"></paper-icon-button>
+                                            <paper-icon-button icon="delete" id="plugin-delete-btn"></paper-icon-button>
+                                            <paper-tooltip for="plugin-info-btn" offset="0" position="top">View plugin info</paper-tooltip>
+                                            <paper-tooltip for="plugin-update-btn" offset="0" position="top">Download plugin update</paper-tooltip>
+                                            <paper-tooltip for="plugin-delete-btn" offset="0" position="top">Remove plugin</paper-tooltip>
+                                        </div>
+                                    </paper-item>
+                                </paper-listbox>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        var uiSettings = document.querySelector('#ui-settings'),
+            pluginSettings = document.querySelector('#plugin-settings');
+        function showPlugin() {
+            uiSettings.classList.add('hidden');
+            pluginSettings.classList.remove('hidden');
+        }
+        function showUI() {
+            pluginSettings.classList.add('hidden');
+            uiSettings.classList.remove('hidden');
+        }
+    </script>
 </body>
 
 </html>
