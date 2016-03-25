@@ -59,7 +59,7 @@
     padding: 5px;
     margin-bottom: 12px
 }
-.settings .right-panel h1, .settings .right-panel h2, .settings .right-panel h3, .settings .right-panel p {
+.settings .right-panel h1, .settings .right-panel h2, .settings .right-panel h3, .settings .right-panel h4, .settings .right-panel p {
     color: #fff;
 }
 
@@ -102,6 +102,10 @@
     justify-content: space-between;
 }
 
-.settings .setting.plugins-list .setting-inner .plugin-btns paper-icon-button:not(:last-of-type) {
+.settings .setting.plugins-list .plugin-btns .btn:not(:last-of-type) {
     margin-right: 4px;
+}
+
+.settings .setting.plugins-list .plugin-btns .btn {
+    display: inline-block;
 }
