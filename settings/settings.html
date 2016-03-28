@@ -17,10 +17,14 @@
     <link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
     <link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
     <link rel="import" href="../bower_components/paper-tooltip/paper-tooltip.html">
+    <link rel="import" href="../bower_components/paper-ripple/paper-ripple.html">
 
     <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="../bower_components/iron-icons/av-icons.html">
+    <link rel="import" href="../bower_components/iron-icons/image-icons.html">
+    <link rel="import" href="../bower_components/iron-icons/device-icons.html">
     <link rel="import" href="../bower_components/iron-icons/hardware-icons.html">
+    <link rel="import" href="../bower_components/iron-icons/notification-icons.html">
 
     <!-- End Paper Elements -->
 
@@ -40,24 +44,43 @@
     </header>
 
     <div class="settings">
-        
         <paper-icon-button class="back" icon="arrow-back"></paper-icon-button>
         <div class="container">
             <h1>Settings</h1>
             <div class="panel-container">
                 <div class="left-panel">
-                    <style is="custom-style">
-                        .settings .left-panel paper-listbox {
+                    <style scoped="true" is="custom-style">
+                        paper-listbox {
                             --paper-listbox-background-color: transparent;
                             --paper-listbox-color: #fff;
-                        };
+                        }
+                        
+                        paper-item {
+                            --paper-item-selected-weight: 500;
+                            --paper-item-focused-before: {
+                                opacity: 0;
+                            }
+                        }
                     </style>
-                    <paper-listbox selected="2">
-                        <paper-item>General</paper-item>
-                        <paper-item onClick="showUI()">UI Settings</paper-item>
-                        <paper-item onClick="showPlugin()">Plugins</paper-item>
-                        <paper-item>Network</paper-item>
-                        <paper-item>About</paper-item>
+                    <paper-listbox class="settings-tab-container" selected="1">
+                        <paper-item class="setting-tab">
+                            <iron-icon class="icon" icon="settings" onClick="showUI()"></iron-icon> General
+                            <paper-ripple></paper-ripple>
+                        </paper-item>
+                        <paper-item class="setting-tab" onClick="showUI()">
+                            <iron-icon class="icon" icon="image:tune"></iron-icon>UI Settings
+                            <paper-ripple></paper-ripple>
+                        </paper-item>
+                        <paper-item class="setting-tab" onClick="showPlugin()">
+                            <iron-icon class="icon" icon="device:widgets"></iron-icon>Plugins
+                            <paper-ripple></paper-ripple>
+                        </paper-item>
+                        <paper-item class="setting-tab">
+                            <iron-icon class="icon" icon="notification:network-check"></iron-icon>Network
+                            <paper-ripple></paper-ripple>
+                        </paper-item>
+                        <paper-item class="setting-tab">
+                            <iron-icon class="icon" icon="info-outline"></iron-icon>About</paper-item>
                     </paper-listbox>
                 </div>
                 <div class="right-panel">
@@ -65,9 +88,9 @@
                         .settings .right-panel paper-checkbox {
                             --paper-checkbox-label-color: #fff;
                             --paper-checkbox-unchecked-color: var(--paper-grey-500);
-                        };
+                        }
                     </style>
-                    
+
                     <div id="ui-settings" class="hidden">
                         <div class="setting display-settings flex-checkbox">
                             <h2>Display Options</h2>
@@ -101,7 +124,7 @@
                                 .settings .right-panel .plugins-list paper-listbox {
                                     --paper-listbox-background-color: rgba(45, 45, 45, 0.7);
                                     --paper-listbox-color: #fff;
-                                };
+                                }
                             </style>
                             <h2>Plugins List</h2>
                             <div class="setting-inner">
@@ -158,7 +181,7 @@
                                         </div>
                                     </paper-item>
                                     <paper-item>
-                                     <div class="plugin-name">Poop, hahah</div>
+                                        <div class="plugin-name">Poop, hahah</div>
                                         <div class="plugin-btns">
                                             <div class="btn">
                                                 <paper-icon-button icon="update"></paper-icon-button>
@@ -185,10 +208,12 @@
     <script>
         var uiSettings = document.querySelector('#ui-settings'),
             pluginSettings = document.querySelector('#plugin-settings');
+
         function showPlugin() {
             uiSettings.classList.add('hidden');
             pluginSettings.classList.remove('hidden');
         }
+
         function showUI() {
             pluginSettings.classList.add('hidden');
             uiSettings.classList.remove('hidden');

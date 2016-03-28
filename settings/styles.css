@@ -26,30 +26,56 @@
     font-size: 34px;
     font-weight: 400;
     color: #fff;
-    line-height: 38px;
+    z-index: 1;
+    position: absolute;
+    line-height: 40px;
     margin-left: 52px;
 }
 
 .settings .panel-container {
-    position: relative;
-    width: 100%;
+    width: 100vw;
+    left: 0;
+    height: 100vh;
+    top: 0;
+    position: absolute;
     box-sizing: border-box;
-    height: calc(100% - 48px);
-    margin-top: 10px;
 }
 
 .settings .left-panel {
-    background-color: rgba(45, 45, 45, 0.7);
-    width: 200px;
+    width: 300px;
     height: 100%;
+    background-color: #3f51b5;
     float: left;
 }
 
+.settings .settings-tab-container {
+    margin-top: 120px;
+    position: relative;
+}
+
+.settings .setting-tab {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: right;
+    height: 50px;
+    text-transform: uppercase;
+    line-height: 25px;
+}
+
+.settings .setting-tab .icon {
+    margin-right: 20px;
+    margin-left: 65px;
+}
+
 .settings .right-panel {
-    width: calc(100% - 200px);
-    height: 100%;
+    width: calc(100% - 300px);
+    height: 100;
     float: right;
-    padding: 5px 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 70px;
     box-sizing: border-box
 }
 
@@ -59,7 +85,12 @@
     padding: 5px;
     margin-bottom: 12px
 }
-.settings .right-panel h1, .settings .right-panel h2, .settings .right-panel h3, .settings .right-panel h4, .settings .right-panel p {
+
+.settings .right-panel h1,
+.settings .right-panel h2,
+.settings .right-panel h3,
+.settings .right-panel h4,
+.settings .right-panel p {
     color: #fff;
 }
 
@@ -83,6 +114,7 @@
     flex-wrap: wrap;
     max-width: 850px;
 }
+
 .setting.flex-checkbox paper-checkbox {
     width: 50%;
     min-width: 355px;
